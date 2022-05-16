@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
           a.trailers = res[i].trailers[0]
           obj.push(a)
         })
-        console.log(obj)
         this.destaque = obj[0]
         this.embrev = obj
 

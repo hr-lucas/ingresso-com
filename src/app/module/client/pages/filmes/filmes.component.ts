@@ -16,7 +16,6 @@ export class FilmesComponent implements OnInit {
   ngOnInit(): void {
     this.services.appListFilmBrev.subscribe(
       res => {
-        console.log(res)
         let obj: any[] = []
         res.forEach((e: any, i: number) => {
           let a: any = {}
@@ -25,9 +24,7 @@ export class FilmesComponent implements OnInit {
           a.url = res[i].images
           obj.push(a)
         })
-        console.log(obj)
         this.embrev = obj
-
       }
 
 

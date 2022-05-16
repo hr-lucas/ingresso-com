@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 15px;
   .imagens-item{
-    flex: 1 1 150px;
+    flex: 1 1 200px;
     a{
       text-decoration: none;
       color: white;
@@ -12,4 +12,11 @@
 }
 img{
   width: 100%;
+}
+
+
+@media screen and (max-witdh:768px){
+  .imagens-item{
+    flex: 1 1 150px;
+  }
 }
