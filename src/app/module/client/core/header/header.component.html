@@ -1,0 +1,115 @@
+<section class="header fixed-top">
+  <div class="container">
+    <div class="logo">
+      <img
+        src="../../../../../assets/icons/logo/ingresso-com-logo.svg"
+        alt="Ingresso.icon"
+      />
+    </div>
+    <div class="logo__mobile">
+      <img
+        src="../../../../../assets/icons/logo/ingresso-com-logo_2.svg"
+        alt="Ingresso.icon"
+      />
+    </div>
+    <div class="menu">
+      <div class="form-group-header">
+        <input type="text" class="form-control-2" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+        <button class="buttons" type="button" id="button-addon1"><i class="uil uil-search-alt"></i></button>
+      </div>
+
+      <div class="buttons-group">
+        <button
+        class="buttons"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Rio de Janeiro <i class="uil uil-location-point"></i>
+      </button>
+      <button
+        class="buttons"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+      <span>   Olá, FrontEnd </span><i class="uil uil-user-circle"></i>
+      </button>
+      <button
+        class="buttons atendent"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        <span>Atendimento</span> <i class="uil uil-exclamation-circle"></i>
+      </button>
+    </div>
+      </div>
+  </div>
+</section>
+
+<header class="header fixed-top-2" id="header">
+  <nav class="nav container container__2">
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item" *ngFor="let item of nav">
+          <a
+            [routerLink]="item.link"
+            routerLinkActive="active-link"
+            class="nav__link"
+          >
+            <i class="bx {{ item.icon }} nav__icon"></i>
+            <span class="nav__name">{{ item.name }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <img src="assets/img/perfil.png" alt="" class="nav__img" />
+  </nav>
+</header>
+
+<div class="collapse" id="collapseExample">
+  <div class="card-bg">
+    <div class="hd-umenu-options row">
+      <div class="umenu-register col-xs-12 col-sm-6">
+        <h2 class="tit3">Ainda não é cliente Ingresso.com ?</h2>
+        <p>
+          Compre ingressos e combos de pipoca para ir ao cinema com segurança e
+          mais comodidade!
+        </p>
+        <a
+          href="https://minha-conta.ingresso.com/#/cadastrar"
+          class="buttons m-b-1"
+          onmousedown="trackEvent({
+             event: 'gaEventPush',
+             event_category: 'NationalHome',
+             event_action: 'Header',
+             event_label: 'Click on Create Account',
+             event_value: '0',
+             event_non_interaction: false });"
+          >Cria uma nova conta</a
+        >
+      </div>
+      <div class="umenu-login col-xs-12 col-sm-6">
+        <h2 class="tit3">Cliente Ingresso.com</h2>
+        <a
+          href="https://minha-conta.ingresso.com/#/minha-conta"
+          onmousedown="trackEvent({
+             event: 'gaEventPush',
+             event_category: 'NationalHome',
+             event_action: 'Header',
+             event_label: 'Click on Sign in to My Account',
+             event_value: '0',
+             event_non_interaction: false });"
+          >Entrar na Minha Conta</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

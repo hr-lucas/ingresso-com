@@ -1,0 +1,12 @@
+
+
+<div class="container">
+  <div class="imagens">
+    <div class="imagens-item" *ngFor="let item of embrev">
+      <a [routerLink]="['../deatails', item.id]">
+        <img [src]="item.url[0].url" alt="{{item.title}}">
+        <p>{{item.title}}</p>
+      </a>
+    </div>
+  </div>
+</div>

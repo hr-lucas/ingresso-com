@@ -1,0 +1,15 @@
+.imagens{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  .imagens-item{
+    flex: 1 1 150px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+img{
+  width: 100%;
+}

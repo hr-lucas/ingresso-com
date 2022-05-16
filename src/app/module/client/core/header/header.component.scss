@@ -1,0 +1,334 @@
+.fixed-top-2{
+  position: absolute;
+  top: 65px;
+  right: 0;
+  left: 0;
+  z-index: 1029;
+  padding: 2px;
+  background-color: #000000b5;
+  color: #09f;
+}
+.header{
+  background-color: rgba(0,0,0,.8);
+  padding: 8px;
+  // position: fixed;
+  // width: 100%;
+}
+img{
+  width: 260px;
+}
+.nav{
+  justify-content: flex-end !important;
+}
+
+.active-link{
+  color:rgb(255, 115, 0) !important;
+}
+.logo{
+  width: 190px;
+}
+.logo__mobile{
+  display: none;
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: #09f;
+  font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .active-link{
+    background-color: black;
+    padding: 25px;
+    position: relative;
+    transition: 1s;
+    top: -5px;
+    border-radius: 100%;
+    color: #ff7300 !important;
+  }
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color:black;
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 2.5rem 1rem;
+    display: flex;
+    align-items: center;
+    transition: .4s;
+    z-index: 99999;
+  }
+
+}
+
+.nav__list,
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: #3578c2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav__list {
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+    li{
+      width: 25%;
+      text-align: center;
+    }
+
+}
+
+.nav__name {
+  font-size: 1rem;
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+  .nav__list {
+    justify-content: center;
+    // column-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 7rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
+  }
+  .nav__img {
+    display: none;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__name {
+    font-size: var(--normal-font-size);
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav__link:hover {
+    color: var(--first-color);
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .active-link::before {
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .container__2 {
+    margin-left: auto;
+    // margin-right: 200px;
+  }
+  .nav__menu{
+    width: 30%;
+  }
+}
+
+.navbar-collapse{
+  justify-content: flex-end;
+}
+form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+
+  input{
+    width: 95%;
+    min-width: 300px;
+    background: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 13px;
+    color: rgb(77, 77, 77);
+
+    &::placeholder{
+      color: rgb(145, 145, 145);
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+  i{
+    color: #09f;
+    font-size: 1.3rem;
+    padding: 1px 10px;
+    cursor: pointer;
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo{
+    width: 30%;
+  }
+  .menu{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 35px;
+    .buttons{
+      border: 0;
+      background: 0;
+      color:white ;
+      i{
+        color: #3578c2;
+        &:active{
+          color: #ff7300;
+        }
+      }
+    }
+  }
+}
+.tit3{
+  font-size: 1.125rem;
+  color: #fff;
+}
+.card-bg{
+  background-color: #252525;
+  padding: 20px;
+  .hd-umenu-options{
+    .umenu-register{
+
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+}
+#collapseExample{
+  position: absolute !important;
+  right: 188px;
+  border: 0!important;
+  width: 50%;
+  max-width: 800px;
+  top: 40px;
+  z-index: 999999;
+}
+
+.form-group-header{
+  input{
+    padding: 0 21px;
+    border: 0;
+    border-left: 3px solid #3578c2;
+    outline: none;
+    &:focus{
+      border-color: #3578c2;
+    }
+  }
+  .buttons{
+    margin-left: -26px;
+    border: 0;
+    background: 0;
+    color:white ;
+    i{
+      color: #3578c2;
+      &:active{
+        color: #ff7300;
+      }
+    }
+  }
+}
+.buttons-group{
+  display: flex;
+  gap: 12px;
+}
+
+
+
+@media screen and (max-width:768px) {
+  .logo__mobile{
+    display: block;
+    img{
+      width: 40px;
+    }
+  }
+  .logo{
+    display:none;
+  }
+    .form-group-header{
+      display: none;
+    }
+    .buttons-group{
+      .buttons span{
+        display: none;
+      }
+      .atendent{
+        display: none;
+        i{
+          display: none;
+        }
+      }
+    }
+
+    #collapseExample{
+      position: absolute !important;
+      right: 0 !important;
+      border: 0!important;
+      width: 100% !important;
+      top: 60px;
+    }
+    .fixed-top-2{
+      top: 0;
+    }
+}

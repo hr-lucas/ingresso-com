@@ -1,0 +1,67 @@
+<section class="container"></section>
+<div class="container">
+  <div class="header__section">
+    <div class="information__header">
+      <div class="information__image">
+        <img src="{{ dados.images[0].url }}" alt="{{ dados.title }}" />
+      </div>
+      <div class="information__dados">
+        <h3>{{ dados.title }}</h3>
+        <div class="genre">
+          <div style="display: flex">
+            <div *ngFor="let item of dados.genres" s>
+              <span class="tag tag-genre">{{ item }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <div class="buttons">
+            <a class="btn btn-outline-light" href="{{dados.trailers[0].url}}"
+            ><i class="uil uil-play"></i> Trailer</a
+          >
+          <button
+            class="btn btn-outline-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2"
+            aria-expanded="false"
+            aria-controls="multiCollapseExample2"
+          >
+            <i class="uil uil-ellipsis-v"></i>Detalhes
+          </button>
+
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="collapse " id="multiCollapseExample2">
+                <div class="">
+                  <p>
+                    {{ dados.synopsis }}
+                  </p>
+                  <div class="detalhes">
+                    <div class="detalhes__item">
+                      <span>Nome Original</span>
+                      <p>{{ dados.originalTitle }}</p>
+                    </div>
+                    <div class="detalhes__item">
+                      <span>Dirigido por</span>
+                      <p>{{ dados.director }}</p>
+                    </div>
+                    <div class="detalhes__item">
+                      <span>Distribuidor</span>
+                      <p>{{ dados.distributor }}</p>
+                    </div>
+                    <div class="detalhes__item">
+                      <span>País de Origem</span>
+                      <p>{{ dados.countryOrigin }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
