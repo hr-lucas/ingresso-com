@@ -22,7 +22,6 @@ export class DetailsComponent implements OnInit {
       })
       filter.forEach((element: any) => {
         this.dados = element
-        console.log("Filtro", this.dados)
       })
     })
 
